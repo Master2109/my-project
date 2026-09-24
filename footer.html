@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcf8f5;
+  color: #1a1a1a;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 13px;
+  line-height: 1.4;
+   /* Border*/
+  border-left: 70px solid black;
+  border-right: 70px solid black;
+            
+ /* Inahakikisha border inaenea urefu wote wa skrini */
+  min-height: 100vh;
+}
+
+    /* --- FOOTER SECTION --- */
+.site-footer {
+  background-color: #f7e2d3;
+  border-top: 1px solid #d8c2b3;
+}
+
+.footer-divider {
+  height: 4px;
+  background-color: #ff5500;
+  width: 100%;
+}
+
+.footer-container {
+  padding: 50px 5% 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col { flex: 1; }
+
+.footer-logo {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 28px;
+  color: #0b1e36;
+  margin-bottom: 15px;
+}
+
+.brand-col p {
+  color: #b04e22;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+.col-title {
+  font-size: 12px;
+  color: #3b506b;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.directory-col ul { list-style: none; }
+.directory-col li { margin-bottom: 10px; }
+.directory-col a { color: #3b506b; text-decoration: underline; font-size: 14px; }
+
+.image-wrapper {
+  border: 1px solid #4a6b82;
+  overflow: hidden;
+  height: 120px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(80%) contrast(120%);
+}
+
+.footer-bottom {
+  border-top: 1px solid #d8c2b3;
+  padding: 15px 5%;
+  text-align: left;
+}
+
+.footer-bottom p {
+  font-size: 11px;
+  color: #3b506b;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+ /* Mstari wa mistari ya tahadhari (Hazard Stripes) chini */
+    .hazard-stripe {
+      height: 14px;
+      background: repeating-linear-gradient(
+        -45deg,
+        #FF5500,
+        #FF5500 12px,
+        #1A2634 12px,
+        #1A2634 24px
+      );
+      border-top: 2px solid #1A2634;
+      width: 100%;
+      position: relative;
+      top: -10px;
+      margin-bottom: -40px;
+}
+
+/* --- MOBILE RESPONSIVE (MAX-WIDTH: 768PX) --- */
+@media (max-width: 768px) {
+.footer-container {
+  flex-direction: column;
+}
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- 1. Sanduku litakalobeba Navigation Bar kutoka nav.html -->
+    <div id="foot"></div>
+
+   <!-- FOOTER SECTION -->
+    <footer class="site-footer">
+      <div class="footer-divider"></div>
+      <div class="footer-container">
+        <div class="footer-col brand-col">
+          <h3 class="footer-logo">TRADESFORCE</h3>
+          <p>Industrial grade service for critical infrastructure. Operating with precision, safety, and urgency.</p>
+        </div>
+
+        <div class="footer-col directory-col">
+          <h4 class="col-title">SYSTEM DIRECTORY</h4>
+          <ul>
+            <li><a href="#">Emergency Dispatch</a></li>
+            <li><a href="#">Service Areas</a></li>
+            <li><a href="#">Safety Standards</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col zone-col">
+          <h4 class="col-title">OPERATIONAL ZONE</h4>
+          <div class="image-wrapper">
+            <img src="c:\xampp\htdocs\Project\img\AB6AXuCsWAROO5yNXKTaZ6kuliWhBVvBf4fz5MhbZCP9vA3rsA17zhzAC1Yk_gedCx08QaYsng_CYljlQjiRTIsOR2IAMLj8_bk5z0voUmRPTPTKz3sRFybLz8X5GbtlqtM3YS0Y-i_fgXZHD4dRgY_M83_qjoJzlDnQWwnd2cZxyhRY_QZoATqAmvAEZJ_tlD_VCiCBYiK_poh7EXX_8-.png" alt="Operational Zone Map">
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 TRADESFORCE INDUSTRIAL SERVICES. LICENSED & BONDED #88291-A. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+
+     <!-- Mstari wa Chini wenye Hazard Pattern -->
+    <div class="hazard-stripe"></div>
+
+</body>
+</html>

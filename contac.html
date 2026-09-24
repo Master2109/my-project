@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRADESFORCE // Direct Dispatch & Command Terminal</title>  
+   <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVIGATION CODE ONLY --->
+<div class="tf-header">
+
+    <header class="tf-navbar">
+
+        <!-- LEFT SIDE -->
+        <div class="tf-nav-left">
+
+            <a href="index.php" class="tf-logo">
+                <span class="tf-logo-icon"></span>
+                <span class="tf-logo-text">TRADESFORCE</span>
+            </a>
+
+            <div class="tf-sub-badge">
+                HEAVY INDUSTRIAL // DISPATCH READY
+            </div>
+
+        </div>
+
+
+        <!-- HAMBURGER -->
+        <button
+            class="tf-hamburger"
+            id="tfHamburger"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+
+        <!-- RIGHT SIDE -->
+        <div class="tf-nav-right" id="tfNavMenu">
+
+            <nav class="tf-nav-links">
+
+                 <a href="home.html">
+                    HOME
+                </a>
+
+                <a href="service.html">
+                    SERVICES
+                </a>
+
+                <a href="about.html">
+                    ABOUT
+                </a>
+
+                <a href="contac.html">
+                    CONTACT
+                </a>
+
+            </nav>
+
+
+            <!-- CALL BUTTON -->
+            <a
+                href="tel:18005559821"
+                class="tf-btn-call">
+
+                <span>*</span>
+                CALL NOW
+
+            </a>
+
+        </div>
+
+    </header>
+
+</div>
+
+<div id="dispatch-dashboard-scope">
+  <!-- TOP TERMINAL HEADER -->
+  <div class="top-terminal-tag">TRANSMISSION TERMINAL // SECURE INCIDENT LOG</div>
+  <div class="dashboard-header">
+    <h1 class="dashboard-title">DIRECT DISPATCH & COMMAND</h1>
+    <div class="relay-node-badge" id="relayNode">📡 PRIORITY RELAY NODE #04-EAST</div>
+  </div>
+
+  <!-- MAIN TWO-COLUMN GRID -->
+  <div class="main-grid">
+    
+    <!-- LEFT FORM PANEL -->
+    <div class="form-panel">
+      <div class="section-badge">INCIDENT TRANSMISSION LOG ➔</div>
+
+      <!-- 01. PROBLEM CATEGORY -->
+      <div class="field-group">
+        <div class="field-header">
+          <span class="field-label">01. PROBLEM CATEGORY</span>
+          <span class="field-sub">*MANDATORY SPECIFICATION</span>
+        </div>
+        <div class="category-grid" id="categoryGrid">
+          <div class="category-card active" data-category="PLUMBING">
+            <span class="category-icon">🔧</span>
+            <span class="category-name">PLUMBING</span>
+          </div>
+          <div class="category-card" data-category="ELECTRICAL">
+            <span class="category-icon">⚡</span>
+            <span class="category-name">ELECTRICAL</span>
+          </div>
+          <div class="category-card" data-category="HVAC / CLIMATE">
+            <span class="category-icon">❄️</span>
+            <span class="category-name">HVAC / CLIMATE</span>
+          </div>
+          <div class="category-card" data-category="FACILITY SLA">
+            <span class="category-icon">🦾</span>
+            <span class="category-name">FACILITY SLA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02. SEVERITY RESPONSE TIER -->
+      <div class="field-group">
+        <div class="field-header">
+          <span class="field-label">02. SEVERITY RESPONSE TIER</span>
+          <span class="field-sub">IMPACT ASSESSMENT</span>
+        </div>
+
+        <div class="tier-card active" data-tier="1" data-time="UNDER 45 MINS">
+          <div class="tier-header">
+            <div class="tier-title">
+              <span class="tier-radio"></span>
+              LEVEL 1: ACTIVE CRITICAL HAZARD
+            </div>
+            <span class="tier-badge orange-bg">UNDER 45 MINS</span>
+          </div>
+          <p class="tier-desc">Continuous pipe blowout, gas aroma, main electrical arc, live plant shutdown.</p>
+        </div>
+
+        <div class="tier-card" data-tier="2" data-time="UNDER 2 HOURS">
+          <div class="tier-header">
+            <div class="tier-title">
+              <span class="tier-radio"></span>
+              LEVEL 2: COMPROMISED SYSTEM
+            </div>
+            <span class="tier-badge">UNDER 2 HOURS</span>
+          </div>
+          <p class="tier-desc">Complete cooling/heat loss, localized sanitary backup, secondary circuit failure.</p>
+        </div>
+
+        <div class="tier-card" data-tier="3" data-time="SAME-DAY WINDOW">
+          <div class="tier-header">
+            <div class="tier-title">
+              <span class="tier-radio"></span>
+              LEVEL 3: SCHEDULED WORK / DIAGNOSTIC
+            </div>
+            <span class="tier-badge">SAME-DAY WINDOW</span>
+          </div>
+          <p class="tier-desc">Preventative pressure testing, planned valve replacements, non-critical repair.</p>
+        </div>
+      </div>
+
+      <!-- 03. FACILITY LOCATION -->
+      <div class="field-group">
+        <div class="field-header">
+          <span class="field-label">03. FACILITY LOCATION</span>
+        </div>
+        <div class="input-row">
+          <input type="text" id="streetInput" class="text-input" placeholder="STREET ADDRESS (E.G., 480 INDUSTRIAL PKWY)">
+          <input type="text" id="bayInput" class="text-input" placeholder="BAY / SUITE / UNIT">
+        </div>
+      </div>
+
+      <!-- 04. ON-SITE POC INFORMATION -->
+      <div class="field-group">
+        <div class="field-header">
+          <span class="field-label">04. ON-SITE POC INFORMATION</span>
+        </div>
+        <div class="input-row">
+          <input type="text" id="pocNameInput" class="text-input" placeholder="CONTACT FULL NAME">
+          <input type="text" id="pocPhoneInput" class="text-input" placeholder="DIRECT MOBILE PHONE #">
+        </div>
+      </div>
+
+      <!-- 05. INCIDENT TELEMETRY / SYMPTOMS -->
+      <div class="field-group">
+        <div class="field-header">
+          <span class="field-label">05. INCIDENT TELEMETRY / SYMPTOMS</span>
+          <span class="field-sub" id="charCounter">MAX 240 CHARS (0/240)</span>
+        </div>
+        <textarea id="symptomsInput" maxlength="240" class="textarea-input" placeholder="e.g., Main 2-inch supply line fractured in basement utility closet. Water isolation valve is seized; flow is active."></textarea>
+      </div>
+
+      <!-- SUBMIT BUTTON -->
+      <button class="transmit-btn" id="transmitBtn">
+        <span>➢</span> TRANSMIT JOB TICKET & DISPATCH TECH
+      </button>
+      <div class="btn-caption">ENCRYPTED DISPATCH UPLINK // AUTOMATIC AUDIO RECORDING INITIATED UPON TRANSMISSION</div>
+
+    </div>
+
+    <!-- RIGHT SIDEBAR PANEL -->
+    <div class="sidebar-panel">
+
+      <!-- PRIORITY VOICE RELAY -->
+      <div class="voice-relay-card">
+        <div class="voice-relay-header">
+          <span class="voice-tag">PRIORITY VOICE RELAY</span>
+          <span class="voice-status">● LINES OPEN</span>
+        </div>
+        <div class="voice-sub">IMMEDIATE OPERATOR DIRECT</div>
+        <div class="phone-box" id="phoneBox" title="Click to simulate hotline call">
+          <div class="phone-number">(800) 555-JOB1</div>
+          <div class="phone-sub">TOLL-FREE INDUSTRIAL HOTLINE</div>
+        </div>
+        <div class="relay-meta">
+          <span>DESK SCHEDULE:<br><strong>24/7/365 UNINTERRUPTED</strong></span>
+          <span>AVG QUEUE TIME:<br><strong style="color:var(--green-accent);">&lt; 18 SECONDS</strong></span>
+        </div>
+      </div>
+
+      <!-- DEPLOYMENT VEHICLE -->
+      <div class="vehicle-card">
+        <div class="vehicle-img-wrapper">
+          <img src="img/AB6AXuCsWAROO5yNXKTaZ6kuliWhBVvBf4fz5MhbZCP9vA3rsA17zhzAC1Yk_gedCx08QaYsng_CYljlQjiRTIsOR2IAMLj8_bk5z0voUmRPTPTKz3sRFybLz8X5GbtlqtM3YS0Y-i_fgXZHD4dRgY_M83_qjoJzlDnQWwnd2cZxyhRY_QZoATqAmvAEZJ_tlD_VCiCBYiK_poh7EXX_8-.png" alt="Fleet Unit" class="vehicle-img">
+          <div class="vehicle-overlay">
+            READY-MOBILE FLEET UNIT #19<br>
+            EQUIPPED WITH 500+ COMMERCIAL GRADE PARTS & DIAGNOSTIC RIGS
+          </div>
+        </div>
+        <div class="vehicle-info">
+          <div>
+            <div style="font-family: monospace; font-size: 10px; color: var(--text-muted);">DEPLOYMENT VEHICLE</div>
+            <h3 class="vehicle-title">RAPID RESPONSE SQUAD</h3>
+          </div>
+          <span class="tier-tag">TIER 1 RIG</span>
+        </div>
+      </div>
+
+      <!-- METRO COVERAGE HUBS -->
+      <div class="hubs-card">
+        <div class="hubs-title">
+          <span>📍</span> METRO COVERAGE HUBS
+        </div>
+        <div class="hubs-grid">
+          <div class="hub-item">
+            <span>NORTH DISTRICT</span>
+            <span class="hub-time">4 MINS</span>
+          </div>
+          <div class="hub-item">
+            <span>INDUSTRIAL PARK</span>
+            <span class="hub-time">9 MINS</span>
+          </div>
+          <div class="hub-item">
+            <span>HARBOR TERMINALS</span>
+            <span class="hub-time">12 MINS</span>
+          </div>
+          <div class="hub-item">
+            <span>WEST METRO LOGISTICS</span>
+            <span class="hub-time">16 MINS</span>
+          </div>
+        </div>
+        <div class="central-terminal">
+          <strong>🏢 CENTRAL LOGISTICS TERMINAL</strong><br>
+          4200 Heavy Works Blvd, Gate 4, Sector 7<br>
+          <span style="color:var(--orange-dark);">MONITORED GPS FLEET POSITIONING ACTIVE</span>
+        </div>
+      </div>
+
+      <!-- COMPLIANCE ASSURANCE -->
+      <div class="compliance-card">
+        <div class="shield-icon">🛡️</div>
+        <div class="compliance-text">
+          <strong>COMPLIANCE ASSURANCE</strong><br>
+          LIC #88291-A // $10,000,000 INDUSTRIAL SURETY BOND<br>
+          OSHA 30 SUPERVISORS // CERTIFIED MECHANICAL CONTRACTORS
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM RAPID RESPONSE WORKFLOW PANEL -->
+  <div class="workflow-panel">
+    <div class="workflow-header">
+      <h2 class="workflow-title">RAPID RESPONSE WORKFLOW</h2>
+      <span class="time-estimate-badge" id="workflowTimeEstimate">TOTAL ESTIMATED TIME TO COMMENCE: 18 - 45 MINS</span>
+    </div>
+
+    <div class="steps-grid">
+      <!-- STEP 1 -->
+      <div class="step-card">
+        <div>
+          <div class="step-num">01</div>
+          <span class="step-time-tag">&lt; 60 SEC</span>
+          <h3 class="step-heading">TICKET AUTOMATION & LOG</h3>
+          <p class="step-desc">Your telemetry and description hit the primary dispatch console. Master technicians automatically lock in your site coordinates and route the closest squad.</p>
+        </div>
+        <div class="step-link">📡 CELLULAR TELEMETRY LINK</div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step-card">
+        <div>
+          <div class="step-num blue">02</div>
+          <span class="step-time-tag blue-bg">UNDER 5 MIN</span>
+          <h3 class="step-heading">ENGINEER CALL EN ROUTE</h3>
+          <p class="step-desc">The assigned lead technician calls your direct POC mobile to verify shut-off protocols, hazard boundaries, and confirm exact bay arrival window.</p>
+        </div>
+        <div class="step-link">📞 DIRECT RADIO INTERFACE</div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step-card">
+        <div>
+          <div class="step-num dark-orange">03</div>
+          <span class="step-time-tag orange-bg" id="step3TimeBadge">&lt; 45 MIN</span>
+          <h3 class="step-heading">ON-SITE ARSENAL DEPLOYED</h3>
+          <p class="step-desc">A fully stocked TRADESFORCE response van arrives with heavy mechanical tooling, high-pressure jetters, replacement valves, and isolation containment gear.</p>
+        </div>
+        <div class="step-link">🔧 RAPID CONTAINMENT PROTOCOL</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLA BANNER FOOTER -->
+  <div class="sla-banner">
+    <div class="sla-left">
+      <div class="sla-icon-box">🛡️</div>
+      <div>
+        <h3 class="sla-title">FACILITY CRITICAL SLA CLIENTS</h3>
+        <div class="sla-sub" id="slaSubText">Have your 6-digit Facility Identification Key ready for sub-20 minute priority override dispatch.</div>
+      </div>
+    </div>
+    <button class="sla-verify-btn" id="slaVerifyBtn">SLA KEY VERIFY</button>
+  </div>
+</div>
+
+<!-- TRANSMISSION TERMINAL MODAL -->
+<div class="modal-overlay" id="transmissionModal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <span>TRANSMISSION UPLINK</span>
+      <span style="font-size:12px; font-family:monospace; color:var(--orange-bright);" id="ticketIdTag">TKT #---</span>
+    </div>
+    <div class="modal-body">
+      <p>Establishing encrypted link to priority relay #04-EAST...</p>
+      <div class="modal-terminal-log" id="terminalLog">
+        > INITIALIZING DISPATCH SEQUENCE...<br>
+      </div>
+    </div>
+    <button class="close-modal-btn" id="closeModalBtn">DISMISS / RETURN TO DASHBOARD</button>
+  </div>
+</div>
+
+<!-- JAVASCRIPT LOGIC -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Category Selection Handling
+    const categoryCards = document.querySelectorAll('.category-card');
+    let selectedCategory = 'PLUMBING';
+
+    categoryCards.forEach(card => {
+      card.addEventListener('click', () => {
+        categoryCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        selectedCategory = card.getAttribute('data-category');
+      });
+    });
+
+    // 2. Severity Tier Selection Handling & Dynamic Time Updates
+    const tierCards = document.querySelectorAll('.tier-card');
+    const step3TimeBadge = document.getElementById('step3TimeBadge');
+    const workflowTimeEstimate = document.getElementById('workflowTimeEstimate');
+
+    tierCards.forEach(card => {
+      card.addEventListener('click', () => {
+        tierCards.forEach(t => t.classList.remove('active'));
+        card.classList.add('active');
+        const tierNum = card.getAttribute('data-tier');
+        const timeText = card.getAttribute('data-time');
+
+        if (tierNum === '1') {
+          step3TimeBadge.textContent = '< 45 MIN';
+          workflowTimeEstimate.textContent = 'TOTAL ESTIMATED TIME TO COMMENCE: 18 - 45 MINS';
+        } else if (tierNum === '2') {
+          step3TimeBadge.textContent = '< 2 HOURS';
+          workflowTimeEstimate.textContent = 'TOTAL ESTIMATED TIME TO COMMENCE: 1 - 2 HOURS';
+        } else {
+          step3TimeBadge.textContent = 'SAME DAY';
+          workflowTimeEstimate.textContent = 'TOTAL ESTIMATED TIME TO COMMENCE: SAME-DAY WINDOW';
+        }
+      });
+    });
+
+    // 3. Character Counter for Symptoms Field
+    const symptomsInput = document.getElementById('symptomsInput');
+    const charCounter = document.getElementById('charCounter');
+
+    symptomsInput.addEventListener('input', () => {
+      const currentLen = symptomsInput.value.length;
+      charCounter.textContent = `MAX 240 CHARS (${currentLen}/240)`;
+    });
+
+    // 4. Modal Terminal Log Simulation
+    const transmitBtn = document.getElementById('transmitBtn');
+    const modalOverlay = document.getElementById('transmissionModal');
+    const terminalLog = document.getElementById('terminalLog');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const ticketIdTag = document.getElementById('ticketIdTag');
+
+    transmitBtn.addEventListener('click', () => {
+      const street = document.getElementById('streetInput').value.trim();
+      const pocName = document.getElementById('pocNameInput').value.trim();
+
+      if (!street || !pocName) {
+        alert('TAFADHALI JAZA ANUANI YA ENEO (03) NA JINA LA MAWASILIANO (04) KABLA YA KUTUMA.');
+        return;
+      }
+
+      const randomTicket = 'TF-' + Math.floor(100000 + Math.random() * 900000);
+      ticketIdTag.textContent = `TKT #${randomTicket}`;
+      
+      terminalLog.innerHTML = `> INITIALIZING DISPATCH SEQUENCE...<br>`;
+      modalOverlay.classList.add('active');
+
+      const logs = [
+        `> ENCRYPTING TELEMETRY DATA...`,
+        `> CATEGORY LOCK: [${selectedCategory}]`,
+        `> LOCATION VERIFIED: "${street.toUpperCase()}"`,
+        `> POC RECORDED: "${pocName.toUpperCase()}"`,
+        `> ROUTING TO FLEET UNIT #19...`,
+        `> SQUAD DISPATCHED! PRIORITY OVERRIDE ENGAGED.`
+      ];
+
+      logs.forEach((log, index) => {
+        setTimeout(() => {
+          terminalLog.innerHTML += `${log}<br>`;
+          terminalLog.scrollTop = terminalLog.scrollHeight;
+        }, (index + 1) * 400);
+      });
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      modalOverlay.classList.remove('active');
+    });
+
+    // 5. Phone Box Hotline Simulation
+    const phoneBox = document.getElementById('phoneBox');
+    phoneBox.addEventListener('click', () => {
+      alert('Inapiga simu ya dharura: (800) 555-JOB1...\nMuhudumu yuko tayari kupokea simu yako.');
+    });
+
+    // 6. SLA Key Verification Prompt
+    const slaVerifyBtn = document.getElementById('slaVerifyBtn');
+    const slaSubText = document.getElementById('slaSubText');
+
+    slaVerifyBtn.addEventListener('click', () => {
+      const userKey = prompt('Ingiza tarakimu 6 za "Facility Identification Key":');
+      if (userKey) {
+        if (userKey.trim().length === 6) {
+          slaSubText.innerHTML = `<strong style="color:var(--green-accent);">SLA KEY [${userKey.trim()}] VERIFIED: SUB-20 MINUTE PRIORITY ACTIVE</strong>`;
+          slaVerifyBtn.textContent = 'KEY ACTIVATED ✓';
+          slaVerifyBtn.style.backgroundColor = '#00e676';
+        } else {
+          alert('SLA Key lazima iwe na tarakimu 6 kamili.');
+        }
+      }
+    });
+  });
+
+  (function () {
+
+    const tfHamburger =
+        document.getElementById('tfHamburger');
+
+    const tfNavMenu =
+        document.getElementById('tfNavMenu');
+
+
+    /* HAMBURGER */
+
+    if (tfHamburger && tfNavMenu) {
+
+        tfHamburger.addEventListener('click', function (event) {
+
+            event.stopPropagation();
+
+            tfHamburger.classList.toggle('tf-open');
+
+            tfNavMenu.classList.toggle('tf-show');
+
+            const isOpen =
+                tfHamburger.classList.contains('tf-open');
+
+            tfHamburger.setAttribute(
+                'aria-expanded',
+                isOpen ? 'true' : 'false'
+            );
+
+        });
+
+
+        /* CLOSE WHEN CLICKING OUTSIDE */
+
+        document.addEventListener('click', function (event) {
+
+            if (
+                !tfHamburger.contains(event.target) &&
+                !tfNavMenu.contains(event.target)
+            ) {
+
+                tfHamburger.classList.remove('tf-open');
+
+                tfNavMenu.classList.remove('tf-show');
+
+                tfHamburger.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+
+            }
+
+        });
+
+
+        /* CLOSE AFTER CLICKING A LINK */
+
+        tfNavMenu
+            .querySelectorAll('.tf-nav-links a')
+            .forEach(function (link) {
+
+                link.addEventListener('click', function () {
+
+                    tfHamburger.classList.remove('tf-open');
+
+                    tfNavMenu.classList.remove('tf-show');
+
+                    tfHamburger.setAttribute(
+                        'aria-expanded',
+                        'false'
+                    );
+
+                });
+
+            });
+
+    }
+
+})();
+
+</script>
+
+</body>
+</html>
